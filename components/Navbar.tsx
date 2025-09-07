@@ -29,16 +29,18 @@ export default function Navbar() {
   // const { toggleSidebar } = useSidebar();
 
   return (
-    <nav className="flex items-center select-none p-4 justify-between">
-      <SidebarTrigger />
+    <nav className="flex items-center sticky z-10 bg-background top-0 select-none p-4 justify-between">
+      <div className="flex items-center gap-1">
+        <SidebarTrigger />
+
+        <Link href="/">Dashboard</Link>
+      </div>
 
       {/* <Button variant="outline" onClick={toggleSidebar}>
         Custom Button
       </Button> */}
 
       <div className="flex items-center gap-4">
-        <Link href="/">Dashboard</Link>
-
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" size="icon">
